@@ -12,17 +12,22 @@
       gtag('js', new Date());
       gtag('config', 'G-HFG4X9205N');
 
-      // Track pageview / click
-      gtag('event', 'click', { 
-          'event_category': 'Project', 
-          'event_label': 'KNN-HOG', 
-          'send_to': 'G-HFG4X9205N' 
-      });
+      // Redirect after GA tracking
+      function redirectWithTracking() {
+          // Track a custom event before redirect
+          gtag('event', 'redirect_click', { 
+              'event_category': 'Project', 
+              'event_label': 'KNN-HOG'
+          });
 
-      // Redirect immediately (after 0.5 seconds to allow GA tracking)
-      setTimeout(function() {
-          window.location.href = "https://github.com/AbHXn/KNN-HOG-for-image-classification";
-      }, 500);
+          // Give GA some time to send data (1–2 seconds)
+          setTimeout(function() {
+              window.location.href = "https://github.com/AbHXn/KNN-HOG-for-image-classification";
+          }, 2000);
+      }
+
+      // Run the redirect function after page load
+      window.onload = redirectWithTracking;
     </script>
 </head>
 <body>
