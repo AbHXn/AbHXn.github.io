@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AbHXn Projects</title>
+    <title>KNN + HOG Project</title>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFG4X9205N"></script>
     <script>
@@ -10,24 +11,21 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-HFG4X9205N');
+
+      // Track pageview / click
+      gtag('event', 'click', { 
+          'event_category': 'Project', 
+          'event_label': 'KNN-HOG', 
+          'send_to': 'G-HFG4X9205N' 
+      });
+
+      // Redirect immediately (after 0.5 seconds to allow GA tracking)
+      setTimeout(function() {
+          window.location.href = "https://github.com/AbHXn/KNN-HOG-for-image-classification";
+      }, 500);
     </script>
 </head>
 <body>
-    <h1>Github Repos</h1>
-
-    <h2><a href="https://github.com/AbHXn/KNN-HOG-for-image-classification" target="_blank"
-           onclick="gtag('event', 'click', { 'event_category': 'Project', 'event_label': 'KNN-HOG', 'send_to': 'G-HFG4X9205N' });">
-           KNN + HOG Image Classifier
-        </a></h2>
-
-    <h2><a href="https://github.com/AbHXn/Fshell" target="_blank"
-           onclick="gtag('event', 'click', { 'event_category': 'Project', 'event_label': 'Fshell', 'send_to': 'G-HFG4X9205N' });">
-           Python FShell
-        </a></h2>
-
-    <h2><a href="https://github.com/AbHXn/Malware-Classification-Random-Forest-Scratch" target="_blank"
-           onclick="gtag('event', 'click', { 'event_category': 'Project', 'event_label': 'Malware Detector', 'send_to': 'G-HFG4X9205N' });">
-           Malware Detector (C++)
-        </a></h2>
+    Redirecting to KNN + HOG GitHub repo...
 </body>
 </html>
